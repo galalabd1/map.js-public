@@ -1,0 +1,35 @@
+.padding{
+	padding:200px;
+}
+table{
+	width:50%;
+}
+p{
+	font-size:20px;
+	font-family: 'JetBrains Mono', monospace;
+}
+.red {
+	color: red
+	;
+}
+h1,h2,h3{
+	color: red;
+}
+body{
+	background-color: #add8e6 ;
+}
+a{
+	font-size:30px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a:visited{
+	color: black;
+	text-decoration: none; 
+}
+a, u{
+	text-decoration: none;
+}
+h3{
+	font-size:20px;
+}

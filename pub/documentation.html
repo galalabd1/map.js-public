@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="documentation.css">
+
+
+</head>
+<body>
+	<a href = "/">Map.js</a>
+	<div class = "padding">
+		<h1>API Methods</h1>
+		<h3>Getting Started</h3>
+		<p>
+			1- Add the html file (index.html) containing the world map to your directory, you will not need to add a script in your files as it is already included in the map html file.<br/>
+		2- Add the css file (style.css) if you would like some of the default styles as the one in our landing page.</p>
+		<h3>Create World Map</h3>
+		<p>const wrld = new WorldMap()</p>
+		<h3>Methods</h3>
+		<p>Methods to control the map:<br/>
+			wrld.mapcolor('color')<span class = "red"> //default: #A9A9A9</span><br/> 
+			wrld.maphovercolor('color')<span class = "red"> //default: white</span><br/>
+			wrld.countryhovercolor('country_id', 'color')<br/>
+			wrld.createtextall('text')<br/>
+			wrld.createtext('country_id', 'text')<br/>
+			wrld.generatecountry('country_name')<br/>
+			wrld.generatecontinent('continent_name')<br/>
+		</p>
+		<h3>Code Snippet</h3>
+		<p>const wrld = new WorldMap()<span class = "red"> // generate world map</span><br/>
+			function examples(){<br/>
+			wrld.mapcolor("#A9A9A9") <span class = "red">// color of the map </span><br/>
+			wrld.maphovercolor("black")<span class = "red"> // color of default hovering</span><br/>
+			wrld.countryhovercolor('BR','red')<span class = "red"> // color of specific ountry hovering</span><br/>
+			wrld.createtextall('Covid Cases = 200')<span class = "red"> // default text of all countries</span><br/>
+			let counter = 0 <span class = "red">// initialize counter</span><br/>
+			<span class = "red">
+				<br/>
+				// filter by continent when picking drop down value
+			</span><br/>
+			document.querySelector('#continents').addEventListener('change',function(){<br/>
+			let original_map = document.getElementById("mysvg")<br/>
+			counter++<br/>
+			if (counter >1){<br/>
+			window.location.reload();<br/>
+		}
+		let x = document.getElementById('continents')<br/>
+		wrld.generatecontinent(original_map, x.value)<br/>
+
+	});<br/>
+
+}<br/>
+examples();
+
+</div>
+</body>
+</html>
